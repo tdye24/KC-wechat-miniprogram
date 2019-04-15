@@ -38,6 +38,7 @@ router.get('/questions/weiguan', controllers.questions.weiguan)
 router.get('/questions', controllers.questions.question_detail)
 router.post('/update', controllers.update.score)
 router.get('/query', controllers.query.note)
+router.get('/query/rank', controllers.query.rank)
 router.get('/demo', controllers.demo)
 
 module.exports = router

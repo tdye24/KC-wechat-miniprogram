@@ -10,6 +10,13 @@ async function note(ctx, next) {
   ctx.state.data = res
 }
 
+async function rank(ctx, next) {
+  var res = await mysql('cSessionInfo').select('*').orderBy('score', 'desc')
+  ctx.state.data = res
+}
+
+
 module.exports = {
-  note
+  note,
+  rank
 }

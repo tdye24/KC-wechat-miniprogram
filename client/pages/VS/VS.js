@@ -40,8 +40,9 @@ Page({
           setTimeout(function () {
             if (i == 5) {
               wx.redirectTo({
-                url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
+                url: `../match_result/match_result?score=${that.data.score}&&subject=${that.data.subject}`,
               })
+              console.log("43行跳转")
               return
             }
             that.setData({
@@ -66,8 +67,9 @@ Page({
           setTimeout(function () {
             if (i == 5) {
               wx.redirectTo({
-                url: `../result/result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
+                url: `../match_result/match_result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
               })
+              console.log("69行跳转")
               return
             }
             that.setData({
@@ -88,7 +90,30 @@ Page({
   },
 
   del: function () {
-    console.log(this.data.i)
+    var i = this.data.i
+    var that = this
+    wx.showToast({
+      title: '您将不会碰到本题',
+      icon: 'none',
+      duration: 1000,
+      mask: true,
+      success: function (res) {
+        setTimeout(function () {
+          i = i + 1
+          if (i == 5) {
+            wx.redirectTo({
+              url: `../match_result/match_result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
+            })
+            console.log("103行跳转")
+            return
+          }
+          that.setData({
+            i: i,
+            leftTime: 15
+          })
+        }, 1000)
+      },
+    })
   },
 
   fav: function (e) {
@@ -108,8 +133,9 @@ Page({
           i = i + 1
           if (i == 5) {
             wx.redirectTo({
-              url: `../result/result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
+              url: `../match_result/match_result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
             })
+            console.log("132行跳转")
             return
           }
           that.setData({
@@ -149,11 +175,13 @@ Page({
         leftTime: leftTime
       })
       if (leftTime === 0) {
-        if (i === 4) {
-          wx.redirectTo({
-            url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
-          })
-        }
+        // if (i === 4) {
+        //   clearInterval(interval)
+        //   wx.redirectTo({
+        //     url: `../match_result/match_result?score=${that.data.score}&&subject=${that.data.subject}`,
+        //   })
+        //   console.log("178行跳转")
+        // }
         that.setData({
           i: i + 1,
           leftTime: 15

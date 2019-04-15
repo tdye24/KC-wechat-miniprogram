@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/chat/chat",
-    "pages/main/main",
     "pages/choose/choose",
     "pages/rank/rank",
     "pages/note/note",
@@ -10,7 +9,8 @@
     "pages/matching/matching",
     "pages/VS/VS",
     "pages/subjects/subjects",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/match_result/match_result"
   ],
   "window": {
     "backgroundTextStyle": "light",

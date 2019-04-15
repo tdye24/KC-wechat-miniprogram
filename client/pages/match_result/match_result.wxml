@@ -1,0 +1,12 @@
+<!--client/pages/match_result/match_result.wxml-->
+<view id="score">{{score}}分</view>
+<view id='info'>{{msg}}</view>
+<image src='{{img_url}}' id='expression'></image>
+<view class='bottomTabSet'>
+  <view class='bottomTab' style='left:0rpx;' bindtap='chooseToHome'>
+    <image class='bottomTabImage' src='../images/home.png'></image>
+  </view>
+  <view class='bottomTab' style='right:0rpx;' bindtap='chooseToNote'>
+    <image class='bottomTabImage' src='../images/note.png'></image>
+  </view>
+</view>

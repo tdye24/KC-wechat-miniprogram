@@ -5,14 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    wx.request({
+      url: 'https://rpvcjsnc.qcloud.la/weapp/query/rank',
+      type: 'GET',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res)
+        var list = []
+        for(var i=0; i<res.data.data.length; i++) {
+          var nickName = JSON.parse(res.data.data[i].user_info).nickName
+          list.push({
+            nickName: nickName,
+            score: res.data.data[i].score
+          }) 
+        }
+        that.setData({
+          list: list
+        })
+      }
+    })
   },
 
   /**

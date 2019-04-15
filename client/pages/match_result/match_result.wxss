@@ -1,0 +1,69 @@
+/* client/pages/match_result/match_result.wxss */
+page {
+  background-color:  #f2f2f2;
+}
+
+#score {
+  font-size: 90rpx;
+  text-align: center;
+  line-height: 300rpx;
+  width: 300rpx;
+  height: 300rpx;
+  background-color: aliceblue;
+  border: 5rpx solid black;
+  position: absolute;
+  left: 29%;
+  top: 15%;
+  border-radius: 50%;
+}
+
+#info {
+  position: absolute;
+  line-height: 200rpx;
+  font-size: 50rpx;
+  text-align: center;
+  border: 3rpx;
+  border-radius: 30rpx;
+  width: 400rpx;
+  background-color: aliceblue;
+  height: 200rpx;
+  left: 23%;
+  top: 45%;
+}
+
+.tabImage {
+  width:119px; 
+  height:119px; 
+  position:relative; 
+  left:190rpx;
+}
+
+.bottomTabSet {
+  position:absolute; 
+  bottom:0rpx; 
+  width:750rpx; 
+  height:120rpx;
+  background-color:aliceblue;
+}
+
+.bottomTab {
+  position: absolute;
+  width: 372rpx;
+  border: 2rpx solid black;
+}
+
+.bottomTabImage {
+  width:100rpx;
+  height:100rpx;
+  position:relative; 
+  left:150rpx;
+}
+
+
+#expression {
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  left: 40%;
+  top: 65%;
+}

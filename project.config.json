@@ -31,19 +31,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
 					"name": "choose",
 					"pathName": "pages/choose/choose",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "标准模式",
-					"pathName": "pages/main/main",
 					"query": "",
 					"scene": null
 				},
@@ -73,6 +66,13 @@
 					"name": "choose",
 					"pathName": "pages/choose/choose",
 					"query": "openId = \"oPnGZ5ZQN31x6kUqhhH1HwbAhrUw\"",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "match_result",
+					"pathName": "pages/match_result/match_result",
+					"query": "",
 					"scene": null
 				}
 			]

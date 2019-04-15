@@ -1,2 +1,4 @@
 <!--client/pages/rank/rank.wxml-->
-<text>client/pages/rank/rank.wxml</text>
+<view wx:for="{{list}}" class='item'>
+  <view style='float:left'>{{index + 1}}.{{item.nickName}}</view><view style='float:right'>{{item.score}}分</view>
+</view>

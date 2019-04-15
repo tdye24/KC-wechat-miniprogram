@@ -1,4 +1,3 @@
-// client/pages/rank/rank.js
 const app = getApp();
 
 Page({
@@ -8,7 +7,8 @@ Page({
    */
   data: {
     score: 0,
-    msg: "Excellent!"
+    msg: "You win!",
+    img_url: '../images/cry.png'
   },
 
   /**
@@ -19,16 +19,19 @@ Page({
     console.log(noteIds)
     console.log("noteIds", noteIds)
     var score = parseInt(options.score);
-    if (score >= 90) {
-      var msg = "Excellent!"
-    } else if (score >= 60) {
-      msg = "Keep moving!"
+    var msg = "You win!"
+    var img_url = ''
+    if (score >= 80) {
+      msg = "You win!"
+      img_url = '../images/smile.png'
     } else {
-      msg = "Come on!"
+      msg = "You lose!"
+      img_url = '../images/cry.png'
     }
     this.setData({
       score: score,
-      msg: msg
+      msg: msg,
+      img_url: img_url
     })
     wx.request({
       url: 'https://rpvcjsnc.qcloud.la/weapp/update',

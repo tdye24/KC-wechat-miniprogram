@@ -88,7 +88,33 @@ Page({
   },
 
   del: function() {
-    console.log(this.data.i)
+    var i = this.data.i
+    var that = this
+    wx.showToast({
+      title: '您将不会碰到本题',
+      icon: 'none',
+      duration: 1000,
+      mask: true,
+      success: function (res) {
+        that.data.noteIds.push({
+          id: that.data.questions[i].id,
+          question: that.data.questions[i].question
+        })
+        setTimeout(function () {
+          i = i + 1
+          if (i == 5) {
+            wx.redirectTo({
+              url: `../result/result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
+            })
+            return
+          }
+          that.setData({
+            i: i,
+            leftTime: 15
+          })
+        }, 1000)
+      },
+    })
   },
 
   fav: function(e) {
@@ -149,11 +175,12 @@ Page({
         leftTime: leftTime 
       })
       if(leftTime === 0) {
-        if(i === 4) {
-          wx.redirectTo({
-            url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
-          })
-        }
+        // if(i === 4) {
+        //   clearInterval(interval)
+        //   wx.redirectTo({
+        //     url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
+        //   })
+        // }
         that.setData({
           i: i + 1,
           leftTime: 15
