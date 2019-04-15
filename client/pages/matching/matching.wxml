@@ -1,0 +1,14 @@
+<!--client/pages/matching/matching.wxml-->
+<view id='one'>
+  <image class='avatar' src="{{userInfo.avatarUrl}}">
+  </image>
+  <!-- <view class='nickName'>{{nickName}}</view> -->
+</view>
+
+<view><text class='vs'>VS</text></view>
+
+<view id='two'>
+  <image class='avatar' src='{{rival.avatarUrl}}'>
+  </image>
+  <!-- <view class='nickName'>{{rival.nickName}}</view> -->
+</view>

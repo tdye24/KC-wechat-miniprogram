@@ -1,0 +1,39 @@
+<!--client/pages/test/test.wxml-->
+<view id='state_bar'>
+  <text>单选({{i+1}}/5)</text>
+</view>
+<view id='question'>
+  <text style='font-size:40rpx;'>{{i+1}}.{{questions[i].question}}</text>
+  <view>
+    <radio-group bindchange="radioChange">
+      <view>
+        <radio class="radio" value='A' checked='{{checkedA}}'>
+        </radio>
+        <text>{{'A.' + questions[i].A}}</text>
+      </view>
+      <view>
+        <radio class="radio" value='B' checked='{{checkedB}}'>
+        </radio>
+        <text>{{'B.' + questions[i].B}}</text>
+      </view>
+
+      <view>
+        <radio class="radio" value='C' checked='{{checkedC}}'>
+        </radio>
+        <text>{{'C.' + questions[i].C}}</text>
+      </view>
+
+      <view>
+        <radio class="radio" value='D' checked='{{checkedD}}'>
+        </radio>
+        <text>{{'D.' + questions[i].D}}</text>
+      </view>
+
+    </radio-group>
+  </view>
+</view>
+<view id='timer' style='background-color: {{backgroundColor}};'>{{leftTime}}S</view>
+<view>
+  <button id='del' bindtap='del'>斩掉</button>
+  <button id='fav' bindtap='fav'>收藏</button>
+</view>

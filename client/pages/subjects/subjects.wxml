@@ -1,0 +1,33 @@
+<!--client/pages/subjects/subjects.wxml-->
+<view class='tab' style='top:0rpx;' wx:if="{{mode==='test'}}" bindtap='subjectsToTest' id='zhengzhi'>
+<text class='subjects'>政治经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='tab' style='top:0rpx;' wx:else bindtap='subjectsToMatching' id='zhengzhi'>
+<text class='subjects'>政治经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='tab' style='top:350rpx;' wx:if="{{mode==='test'}}" bindtap='subjectsToTest' id='weiguan'>
+<text class='subjects'>微观经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='tab' style='top:350rpx;' wx:else bindtap='subjectsToMatching' id='weiguan'>
+<text class='subjects'>微观经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='tab' style='top:700rpx;' wx:if="{{mode==='test'}}" bindtap='subjectsToTest' id='hongguan'>
+<text class='subjects'>宏观经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='tab' style='top:700rpx;' wx:else bindtap='subjectsToMatching' id='hongguan'>
+<text class='subjects'>宏观经济学</text>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+</view>
+<view class='bottomTabSet'>
+  <view class='bottomTab' style='left:0rpx;' bindtap='chooseToRank'>
+    <image class='bottomTabImage' src='../images/rank.png'></image>
+  </view>
+  <view class='bottomTab' style='right:0rpx;' bindtap='chooseToNote'>
+    <image class='bottomTabImage' src='../images/note.png'></image>
+  </view>
+</view>

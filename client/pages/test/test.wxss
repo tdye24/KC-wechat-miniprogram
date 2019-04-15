@@ -1,0 +1,45 @@
+/* client/pages/test/test.wxss */
+#state_bar {
+  background-color:  #f2f2f2;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+text {
+  font-size: 35rpx;
+}
+
+
+#del {
+  width: 50%;
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-radius: 0rpx;
+}
+
+#fav {
+  width: 50%;
+  background-color: #66ccff;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+}
+
+.radio {
+    display: inline block;
+    padding: 10px;
+}
+
+#timer {
+  font-size: 100rpx;
+  position: absolute;
+  left: 37%;
+  bottom: 15%;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 10rpx solid black;
+  line-height: 180rpx;
+}

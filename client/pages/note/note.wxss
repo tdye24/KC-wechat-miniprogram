@@ -1,0 +1,17 @@
+/* client/pages/note/note.wxss */
+
+.item {
+  font-size: 35rpx;
+  width: 710rpx;
+  height: 160rpx;
+  /* line-height: 160rpx; */
+  margin: 20rpx;
+  background-color: #f2f2f2;
+  border-radius: 20rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

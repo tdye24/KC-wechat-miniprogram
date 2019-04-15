@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/main/main",
+    "pages/choose/choose",
+    "pages/rank/rank",
+    "pages/note/note",
+    "pages/test/test",
+    "pages/matching/matching",
+    "pages/VS/VS",
+    "pages/subjects/subjects",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,50 @@
+/* client/pages/subjects/subjects.wxss */
+/* client/pages/choose/choose.wxss */
+page {
+  background-color: #66ccff
+}
+
+.tab {
+  width: 650rpx;
+  height: 280rpx;
+  position: absolute;
+  left: 50rpx;
+  border: 5rpx solid rgb(29, 27, 27);
+  border-radius: 20rpx;
+}
+
+.tabImage {
+  width:119px; 
+  height:119px; 
+  position:relative; 
+  left:190rpx;
+}
+
+.bottomTabSet {
+  position:absolute; 
+  bottom:0rpx; 
+  width:750rpx; 
+  height:120rpx;
+  background-color:aliceblue;
+}
+
+.bottomTab {
+  position: absolute;
+  width: 372rpx;
+  border: 2rpx solid black;
+}
+
+.bottomTabImage {
+  width:100rpx;
+  height:100rpx;
+  position:relative; 
+  left:150rpx;
+}
+
+text.subjects {
+  font-size: 50rpx;
+  font-weight: 900;
+  position: relative;
+  left: 200rpx;
+  top: 100rpx;
+}

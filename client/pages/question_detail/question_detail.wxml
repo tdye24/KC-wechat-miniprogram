@@ -1,0 +1,21 @@
+<!--pages/question_detail/question_detail.wxml-->
+<view>
+  <view id='question'>
+    <text>{{'题目：' + question.question}}</text>
+  </view>
+  <view class='choice'>
+    <text>{{'A.' + question.A}}</text>
+  </view>
+  <view class='choice'>
+    <text>{{'B.' +question.B}}</text>
+  </view>
+  <view class='choice'>
+    <text>{{'C.' + question.C}}</text>
+  </view>
+  <view class='choice'>
+    <text>{{'D.' + question.D}}</text>
+  </view>
+  <view id='answer'>
+    <text>{{"正确答案:" +  question.answer}}</text>
+  </view>
+</view>

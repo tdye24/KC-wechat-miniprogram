@@ -1,0 +1,4 @@
+<!--client/pages/note/note.wxml-->
+<view wx:for="{{noteList}}" class='item' bindtap='question_detail' data-id='{{item.id}}' data-subject='{{item.subject}}' subject='{{item.subject}}'>
+  <text>{{index + 1}}.{{item.question}}</text> 
+</view>

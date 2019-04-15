@@ -1,0 +1,39 @@
+/* client/pages/matching/matching.wxss */
+page {
+  background-color: #66ccff;
+}
+
+.avatar {
+  position: absolute;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgb(51, 95, 78);
+  border-radius: 100rpx;
+}
+
+#one {
+  position: absolute;
+  left: 100rpx; 
+  top: 100rpx;
+}
+
+#two {
+  position: absolute;
+  right: 300rpx;
+  bottom: 350rpx;
+}
+
+text.vs {
+  position: absolute;
+  left: 300rpx;
+  top: 500rpx;
+  font-size: 100rpx;
+  font-weight: 900;
+  font-style: oblique;
+}
+
+/* .nickName {
+  position: relative;
+  top: 100px;
+  left: 18px;
+} */

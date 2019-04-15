@@ -1,0 +1,81 @@
+{
+	"client": "client/",
+	"svr": "server/",
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"appid": "wxe0718a71a8780126",
+	"projectname": "Wafer2",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "choose",
+					"pathName": "pages/choose/choose",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "标准模式",
+					"pathName": "pages/main/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "result",
+					"pathName": "pages/result/result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "note",
+					"pathName": "pages/note/note",
+					"query": "openId = \"oPnGZ5ZQN31x6kUqhhH1HwbAhrUw\"",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "choose",
+					"pathName": "pages/choose/choose",
+					"query": "openId = \"oPnGZ5ZQN31x6kUqhhH1HwbAhrUw\"",
+					"scene": null
+				}
+			]
+		}
+	}
+}

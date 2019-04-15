@@ -1,0 +1,24 @@
+/* pages/question_detail/question_detail.wxss */
+#question {
+  background-color: #f2f2f2;
+  line-height: 60rpx;
+  font-size: 45rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+}
+
+.choice {
+  font-size: 40rpx;
+  line-height: 55rpx;
+  background-color: #f2f2f2;
+  margin: 20rpx;
+  border-radius: 10rpx;
+}
+
+#answer {
+  font-size: 40rpx;
+  line-height: 80rpx;
+  color: red;
+  margin: 40rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,21 @@
+<!--client/pages/choose/choose.wxml-->
+<view class='tab' style='top:0rpx;' bindtap='chooseToSubjects' id='match'>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+  <text class='mode'>随机匹配</text>
+</view>
+<view class='tab' style='top:350rpx;' bindtap='chooseToSubjects' id='vs'>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+  <text class='mode'>好友对战</text>
+</view>
+<view class='tab' style='top:700rpx;' bindtap='chooseToSubjects' id='test'>
+  <!-- <image class='tabImage' src='../images/fight.png'></image> -->
+  <text class='mode'>自我检测</text>
+</view>
+<view class='bottomTabSet'>
+  <view class='bottomTab' style='left:0rpx;' bindtap='chooseToRank'>
+    <image class='bottomTabImage' src='../images/rank.png'></image>
+  </view>
+  <view class='bottomTab' style='right:0rpx;' bindtap='chooseToNote'>
+    <image class='bottomTabImage' src='../images/note.png'></image>
+  </view>
+</view>
