@@ -1,4 +1,4 @@
-// client/pages/VS/VS.js
+// client/pages/test/test.js
 const app = getApp()
 
 Page({
@@ -50,8 +50,9 @@ Page({
               checkedB: false,
               checkedC: false,
               checkedD: false,
+              leftTime: 15
             })
-          }, 1500)
+          }, 1000)
 
         }
       })
@@ -76,9 +77,10 @@ Page({
               checkedB: false,
               checkedC: false,
               checkedD: false,
+              leftTime: 15
             })
 
-          }, 1500)
+          }, 1000)
         }
 
       })
@@ -90,7 +92,33 @@ Page({
   },
 
   fav: function (e) {
-    console.log(this.data.i)
+    var i = this.data.i
+    var that = this
+    wx.showToast({
+      title: '收藏成功',
+      icon: 'success',
+      duration: 1000,
+      mask: true,
+      success: function (res) {
+        that.data.noteIds.push({
+          id: that.data.questions[i].id,
+          question: that.data.questions[i].question
+        })
+        setTimeout(function () {
+          i = i + 1
+          if (i == 5) {
+            wx.redirectTo({
+              url: `../result/result?score=${that.data.score + 20}&&subject=${that.data.subject}`,
+            })
+            return
+          }
+          that.setData({
+            i: i,
+            leftTime: 15
+          })
+        }, 1000)
+      },
+    })
   },
 
 
@@ -98,7 +126,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     wx.request({
       url: `https://rpvcjsnc.qcloud.la/weapp/questions/${options.subject}`,
       method: 'GET',
@@ -111,15 +138,22 @@ Page({
         console.log(res)
       }
     })
+    var that = this
 
-    var i = this.data.i
+
     var interval = setInterval(function () {
+      var i = that.data.i
       var leftTime = that.data.leftTime
       leftTime = leftTime - 1
       that.setData({
         leftTime: leftTime
       })
       if (leftTime === 0) {
+        if (i === 4) {
+          wx.redirectTo({
+            url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
+          })
+        }
         that.setData({
           i: i + 1,
           leftTime: 15

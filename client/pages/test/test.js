@@ -52,7 +52,7 @@ Page({
               checkedD: false,
               leftTime: 15
             })
-          }, 1500)
+          }, 1000)
 
         }
       })
@@ -80,7 +80,7 @@ Page({
               leftTime: 15
             })
 
-          }, 1500)
+          }, 1000)
         }
 
       })
@@ -97,7 +97,7 @@ Page({
     wx.showToast({
       title: '收藏成功',
       icon: 'success',
-      duration: 1500,
+      duration: 1000,
       mask: true,
       success: function(res) {
         that.data.noteIds.push({
@@ -116,7 +116,7 @@ Page({
             i: i,
             leftTime: 15
           })
-        }, 1500)
+        }, 1000)
       },
     })
   },
@@ -140,14 +140,20 @@ Page({
     })
     var that = this
     
-    var i = this.data.i
+    
     var interval = setInterval(function() {
+      var i = that.data.i
       var leftTime = that.data.leftTime
       leftTime = leftTime - 1
       that.setData({
         leftTime: leftTime 
       })
       if(leftTime === 0) {
+        if(i === 4) {
+          wx.redirectTo({
+            url: `../result/result?score=${that.data.score}&&subject=${that.data.subject}`,
+          })
+        }
         that.setData({
           i: i + 1,
           leftTime: 15
